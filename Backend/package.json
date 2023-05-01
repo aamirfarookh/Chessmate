@@ -1,0 +1,26 @@
+{
+  "name": "chessmate",
+  "version": "1.0.0",
+  "description": "A real-time chess application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server":"nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aamirfarookh/ossified-nerve-3185.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aamirfarookh/ossified-nerve-3185/issues"
+  },
+  "homepage": "https://github.com/aamirfarookh/ossified-nerve-3185#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.1.0",
+    "nodemon": "^2.0.22"
+  }
+}
