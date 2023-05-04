@@ -1,0 +1,104 @@
+body {
+    background-color: #F9F9F9;
+    font-family: Arial, sans-serif;
+    background-image: url(../assets/leaderboard_bg.jpg);
+    background-position:center;
+      background-repeat: no-repeat;
+      background-size: cover;  
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: #efad7d;
+  }
+
+  table {
+    border-collapse: collapse;
+    margin: 50px auto;
+    /* background: rgb(108,102,102);
+   background: linear-gradient(90deg, rgba(108,102,102,1) 0%, rgba(205,204,221,1) 19%, rgba(205,217,223,1) 54%, rgba(108,102,102,1) 100%); */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-spacing: 15px;
+    border-spacing: 5px;
+   /* border-collapse:separate; */
+   backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  th, td {
+    padding: 15px;
+    text-align: center;
+  }
+  /* td{
+      margin-top:10px;
+  } */
+
+  th {
+    /* background-color: #644d3c; */
+    color: #FFF;
+  }
+
+ 
+  
+
+  .ranking {
+    width: 50px;
+    /* background-color: rgb(162, 170, 177); */
+    color: #FFF;
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  .player-name {
+    text-align: left;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .rating {
+    width: 100px;
+  }
+
+  .wins, .losses, .draws {
+    width: 50px;
+  }
+
+  .win-loss-draw {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .win {
+    color: green;
+  }
+
+  .loss {
+    color: red;
+  }
+
+  .draw {
+    color: orange;
+  }
+
+  .player-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  body img{
+      margin-top:8px;
+      /* border:1px solid white; */
+      width:15%;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  body img:hover{
+    width:16%;
+  }
