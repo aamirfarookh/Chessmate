@@ -4,6 +4,10 @@ const jwt = require("jsonwebtoken");
 let Redis = require("ioredis");
 const client = new Redis();
 require("dotenv").config();
+let sgMail = require("@sendgrid/mail");
+sgMail.setApiKey(
+  "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"
+);
 
 const registerNewUser = async (req, res) => {
   try {
@@ -135,10 +139,83 @@ const NewAccessToken = async (req, res) => {
   }
 };
 
+var OTP;
+
+const getotp = async (req, res) => {
+  const { email } = req.body;
+  const otp = Math.floor(100000 + Math.random() * 900000);
+  OTP = otp;
+  client.set(email, email, "EX", 60 * 60 * 1000);
+  client.get(email);
+  console.log(email);
+  const msg = {
+    to: email,
+    from: "jraghavendra842@gmail.com",
+    subject: "OTP verification",
+    text: `Hi!, welcome to our website!`,
+    html: `<h1> This is your 6 digit OTP for email verification <h2> ${otp} </h2> Thank you!</h1>`,
+  };
+
+  try {
+    await sgMail.send(msg);
+    console.log("OTP sending successful");
+    console.log("Received OTP value: ", otp);
+
+    // Store the OTP value in the session
+    req.session.otp = otp;
+    console.log("Stored OTP value: ", req.session.otp);
+    res.send({ msg: "OTP is sent to email" });
+  } catch (error) {
+    console.log("error sending mail");
+    console.log(error);
+    res.status(500).send({ msg: "Not able to send OTP to email" });
+  }
+};
+
+const verifyotp = async (req, res) => {
+  try {
+    const { otp } = req.body;
+    const storedOtp = OTP;
+    console.log(otp, storedOtp);
+
+    if (otp == storedOtp) {
+      console.log("OTP verification successful");
+
+      res.send({ msg: "OTP verification successful" });
+    } else {
+      console.log("OTP verification failed");
+      res.status(400).send({ msg: "Invalid OTP" });
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).send({ msg: "Internal server error" });
+  }
+};
+
+const resetpassword = async (req, res) => {
+  const { email, password } = req.body;
+  let useremail = await client.get(email);
+  console.log(useremail);
+  const newhashedPassword = bcrypt.hashSync(password, 8);
+  try {
+    let justcheck = await UserModel.findOneAndUpdate(
+      { email: useremail },
+      { password: newhashedPassword },
+      { new: true }
+    );
+    res.status(200).send({ msg: " Successfuly password changed", justcheck });
+  } catch (error) {
+    res.status(500).send({ msg: error.message });
+  }
+};
+
 module.exports = {
   registerNewUser,
   loginUser,
   logoutUser,
   NewAccessToken,
   client,
+  getotp,
+  verifyotp,
+  resetpassword,
 };

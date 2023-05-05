@@ -6,15 +6,26 @@ const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const { dbConnection } = require("./config/db");
 const { userRouter } = require("./routes/user.route");
-const { oauthRouter } = require("./routes/oauth.route");
 
 // Server configuration
 const app = express();
 const server = http.createServer(app);
+let session = require("express-session");
 const PORT = process.env.PORT || 4500;
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
+app.use(
+  session({
+    secret: "chess secret",
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+      secure: false, // set to true if using HTTPS
+      maxAge: 24 * 60 * 60 * 1000, // 24 hours
+    },
+  })
+);
 
 // Basic endpoint
 app.get("/", (req, res) => {
@@ -22,7 +33,6 @@ app.get("/", (req, res) => {
 });
 
 app.use("/user", userRouter);
-app.use("/auth", oauthRouter);
 
 // Listening to connections made to server
 server.listen(PORT, async () => {
