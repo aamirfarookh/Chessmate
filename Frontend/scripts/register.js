@@ -7,7 +7,7 @@ form.addEventListener("submit", (e) => {
     full_name: document.getElementById("fullname").value,
     email: document.getElementById("email").value,
     password: document.getElementById("password").value,
-    account_name: document.getElementById("accountname").value,
+    // account_name: document.getElementById("accountname").value,
   };
 
   fetch("https://zany-lime-swordfish-cuff.cyclic.app/users/register", {
@@ -28,7 +28,7 @@ form.addEventListener("submit", (e) => {
         document.getElementById("fullname").value = "";
         document.getElementById("email").value = "";
         document.getElementById("password").value = "";
-        document.getElementById("accountname").value = "";
+        // document.getElementById("accountname").value = "";
         window.location.href = "login.html";
       }
     })

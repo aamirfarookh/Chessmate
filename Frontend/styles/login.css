@@ -3,7 +3,7 @@ body{
     margin: 0px;
     padding: 0px;
     /* color: #000000; */
-    background-image: url(../assets/login_bg_img.jpg);
+    /* background-image: url(../assets/login_bg_img.jpg); */
     background-image: url(../assets/bg2.jpg);
     background-size: cover;
     background-attachment: fixed;
@@ -19,13 +19,14 @@ body{
     justify-content: left;
     /* border: 1px solid black; */
     margin-top: -38px;
- margin-left: 25%;
+ margin-left: 21%;
 
 }
 
 
 #logo>img{
     width: 15%;
+    background-color: white;
 }
 #logo h2{
     font-size: 30px;
@@ -51,7 +52,7 @@ body{
 
 
 
-    
+    color: white;
     background: rgba(255,255,255,0.1);
     backdrop-filter: blur(15px);
     border-radius: 10px;
@@ -133,6 +134,11 @@ form{
     color: white;
 }
 
+#continue:hover{
+    background-color: rgb(18, 128, 3);
+    color:rgb(255, 255, 255)
+}
+
 #forgot:hover{
     cursor: pointer;
 }
@@ -146,11 +152,14 @@ form{
 
 #gbtn>img{
     width: 15px;
+    /* margin-top:4px; */
+    
+  
 }
 
 #gbtn:hover{
     cursor: pointer;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(18, 128, 3);
 }
 
 #or{
