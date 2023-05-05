@@ -3,6 +3,7 @@ const express = require("express");
 const http = require("http");
 require("dotenv").config();
 const { dbConnection } = require("./config/db");
+const { lboardRouter } = require("./routes/leaderboard.route");
 
 
 // Server configuration 
@@ -17,6 +18,7 @@ app.get("/",(req,res)=>{
     res.status(200).send("Home page")
 })
 
+app.use("/leaderboard",lboardRouter)
 
 // Listening to connections made to server
 server.listen(PORT,async()=>{
