@@ -96,7 +96,7 @@ border-radius: 10px;
 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 .logo>img{
-width:50%;
+width:60%;
 }
 .links{
 width:60%;
@@ -279,7 +279,7 @@ a {
   
   /* 48em = 768px */
   
-  @media (min-width: 48em) {
+  @media screen and (max-width: 700px) {
     .header li {
       float: left;
     }
@@ -295,7 +295,16 @@ a {
     .header .menu-icon {
       display: none;
     }
+    .main{
+      flex-direction: column-reverse;
+    }
+    .content{
+      width:100%;
+    }
+    .logo img{
+      width:100%;
+    }
+    .container{
+      height:max-content
+    }
   }
-
-
-
