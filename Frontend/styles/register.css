@@ -19,12 +19,13 @@ body{
     justify-content: left;
     /* border: 1px solid black; */
     margin-top: -40px;
- margin-left: 25%;
+ margin-left: 21%;
 
 }
 
 #logo>img{
     width: 15%;
+    background-color: white;
 }
 
 #logo h2{
@@ -46,9 +47,8 @@ body{
 }
 #leftmaincont{
 
-
-
     background: rgba(255,255,255,0.1);
+    color: white;
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
@@ -121,6 +121,11 @@ form{
     margin-bottom: 30px;
     margin-top: 10px;
     color: white;
+}
+
+#continue:hover{
+    background-color: rgb(18, 128, 3);
+    color:rgb(255, 255, 255)
 }
 
 .terms{

@@ -24,7 +24,7 @@ form.addEventListener("submit", (e) => {
         document.getElementById("email").value = "";
         document.getElementById("password").value = "";
         alert("Login Successful!");
-        window.location.href = "../index.html";
+        window.location.href = "./index.html";
       }
     })
     .catch((err) => console.log(err));

@@ -1,0 +1,67 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forget Password Page</title>
+    <link rel="stylesheet" href="./styles/forgetpass.css">
+</head>
+<body>
+    <div class="row">
+        <!-- logo -->
+
+        <div id="logo">
+            <img src="../Frontend/assets/logo_1.jpeg" alt="err">   
+
+            <h2>Chessmate</h2>
+        </div>
+
+
+        <!-- forgot pass -->
+		<h1>Forgot Password</h1>
+
+		<h6 class="information-text">Enter your registered email to reset your password.</h6>
+
+		<div class="form-group">
+            <p><label for="username">Email</label></p>
+			<input type="email" name="user_email" id="user_email">
+			<button onclick="showOTP()"id="fbtn">Sent  OTP</button>
+		</div>
+
+		<div class="footer">
+			<h5>New here? <a href="../Frontend/register.html">Sign Up.</a></h5>
+
+			<h5>Already have an account? <a href="../Frontend/login.html">Sign In.</a></h5>
+
+			<div id="otp-block" class="hidden">
+				<h6 class="information-text">Enter the OTP sent to your email:</h6>
+
+				<div class="form-group">
+                    <p><label for="otp">OTP</label></p>
+					<input type="text" name="otp" id="otp">
+					
+					<button id="vbtn">Verify OTP</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="../Frontend/scripts/forgetpass.js"></script>
+
+
+    <!-- ......or...... -->
+    <!-- <script>
+		function sendOTP() {
+			var emailField = document.getElementById("email");
+			if (emailField.value.trim() === "") {
+				alert("Please enter your registered email address.");
+			} else {
+				alert("OTP has been sent to " + emailField.value);
+			}
+		}
+	</script> -->
+</body>
+</html>
