@@ -6,7 +6,7 @@ form.addEventListener("submit", (e) => {
     email: document.getElementById("email").value,
     password: document.getElementById("password").value,
   };
-  fetch("https://zany-lime-swordfish-cuff.cyclic.app/users/login", {
+  fetch(`http://localhost:4500/user/login`, {
     method: "POST",
     headers: {
       "content-type": "application/json",
@@ -15,17 +15,18 @@ form.addEventListener("submit", (e) => {
   })
     .then((res) => res.json())
     .then((res) => {
-      if (!res.token) {
-        alert("Wrong login Credentials");
+      if (res.msg == "Login success") {
+        window.location.href = "lobby.html"
       } else {
-        console.log(res);
-        localStorage.setItem("token", res.token);
-        localStorage.setItem("email", res.email);
-        document.getElementById("email").value = "";
-        document.getElementById("password").value = "";
-        alert("Login Successful!");
-        window.location.href = "./index.html";
+       alert("Something went wrong")
       }
     })
     .catch((err) => console.log(err));
 });
+
+
+let googleBtn = document.getElementById("gbtn");
+
+googleBtn.addEventListener("click",()=>{
+  // window.location.href="leaderboard.html"
+})

@@ -193,17 +193,23 @@ const verifyotp = async (req, res) => {
 };
 
 const resetpassword = async (req, res) => {
-  const { email, password } = req.body;
-  let useremail = await client.get(email);
-  console.log(useremail);
-  const newhashedPassword = bcrypt.hashSync(password, 8);
   try {
-    let justcheck = await UserModel.findOneAndUpdate(
-      { email: useremail },
-      { password: newhashedPassword },
-      { new: true }
-    );
-    res.status(200).send({ msg: " Successfuly password changed", justcheck });
+    const { email, password } = req.body;
+    let useremail = await client.get(email);
+    console.log(useremail);
+    if (!useremail) {
+      return res
+        .status(400)
+        .send({ msg: "You cannot change password of this email" });
+    } else {
+      const newhashedPassword = bcrypt.hashSync(password, 8);
+      let justcheck = await UserModel.findOneAndUpdate(
+        { email: useremail },
+        { password: newhashedPassword }
+        // { new: true }
+      );
+      res.status(200).send({ msg: "Successfuly password changed", justcheck });
+    }
   } catch (error) {
     res.status(500).send({ msg: error.message });
   }

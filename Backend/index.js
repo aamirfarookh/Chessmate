@@ -6,8 +6,8 @@ require("dotenv").config();
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const { dbConnection } = require("./config/db");
-const { lboardRouter } = require("./routes/leaderboard.route");
-
+const path = require("path")
+// const passport = require("passport")
 const { lboardRouter } = require("./routes/leaderboard.route");
 
 const { userRouter } = require("./routes/user.route");
@@ -32,10 +32,13 @@ app.use(
     },
   })
 );
+app.use(express.static(path.join(__dirname,"../Frontend")))
+
+console.log((path.join(__dirname,"../Frontend")))
 
 // Basic endpoint
 app.get("/", (req, res) => {
-  res.status(200).send("Home page");
+  res.sendFile(path.join(__dirname,"../Frontend/index.html"))
 });
 
 
@@ -43,7 +46,11 @@ app.use("/leaderboard",lboardRouter)
 
 app.use("/user", userRouter);
 
-app.use("/leaderboard",lboardRouter)
+// app.get('/auth/google',passport.authenticate('google', { scope: ['profile','email'] }));
+
+// app.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/login' ,session:false}),function(req, res) {
+//     res.redirect("http://localhost:4500/leaderboard.html")
+//   });
 
 // Listening to connections made to server
 server.listen(PORT, async () => {

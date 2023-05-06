@@ -23,7 +23,7 @@ window.addEventListener("load",()=>{
          <td class="ranking">${i}</td>
          <td class="player-name">
            <img
-             src="./assets/king.png"
+             src="/assets/king.png"
              alt="Player 2"
              class="player-photo"
            />

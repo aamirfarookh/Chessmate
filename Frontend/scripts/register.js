@@ -10,27 +10,26 @@ form.addEventListener("submit", (e) => {
     // account_name: document.getElementById("accountname").value,
   };
 
-  fetch("https://zany-lime-swordfish-cuff.cyclic.app/users/register", {
+  fetch(`http://localhost:4500/user/register`, {
     method: "POST",
     headers: {
       "content-type": "application/json",
     },
     body: JSON.stringify(payload),
   })
-    .then((res) => res.json())
-    .then((res) => {
-      if (res.msg != "Registration Successful") {
-        console.log(res.msg), alert(res.msg);
-      } else {
-        localStorage.setItem("fname", res.fname);
-        console.log(res.msg);
-        alert(res.msg);
-        document.getElementById("fullname").value = "";
-        document.getElementById("email").value = "";
-        document.getElementById("password").value = "";
-        // document.getElementById("accountname").value = "";
-        window.location.href = "login.html";
-      }
-    })
-    .catch((err) => console.log(err));
-});
+  .then((res) => res.json())
+  .then((res) => {
+    if (res.msg != "Registration successful") {
+      console.log(res.msg), alert(res.msg);
+    } else {
+      // localStorage.setItem("fname", res.fname);
+      console.log(res.msg);
+      // alert(res.msg);
+      document.getElementById("fullname").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("password").value = "";
+      window.location.href = "login.html";
+    }
+  })
+  .catch((err) => console.log(err));
+})

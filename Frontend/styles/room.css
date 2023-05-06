@@ -77,7 +77,7 @@
 }
 
 #messages__container {
-  /* border: 1px solid red; */
+  border: 1px solid red;
   height: calc(100vh - 85px);
   background-color: #144272;
   right: 0;
@@ -169,14 +169,16 @@
 }
 
 #stream__container {
-  /* border: 1px solid red; */
+  border: 1px solid red;
   justify-self: centre;
-  width: calc(100% - 65.7rem);
+  width: calc(100% - 75.7rem);
   /* position: fixed; */
   left: 15.7rem;
   top: clac(100vh - 72px);
   overflow-y: auto;
   height: 100%;
+  position:left;
+  
 }
 
 #stream__box{
@@ -216,18 +218,25 @@
   border-radius: 50%;
   cursor: pointer;
   overflow: hidden;
-  height: 300px;
-  width: 300px;
-  background-image: url("/images/logo.png");
+  height: 250px;
+  width: 250px;
+  background-image: url(https://st2.depositphotos.com/33674250/45877/i/600/depositphotos_458772470-stock-photo-coimbatore-india-march-2021-reflection.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 75px;
+  background-size: block;
 }
 
-.video-player{
+.video-player {
   height: 100%;
   width: 100%;
+  /* background-color: white !important; */
 }
+/* .agora_video_player{
+  background-image: url(https://st2.depositphotos.com/33674250/45877/i/600/depositphotos_458772470-stock-photo-coimbatore-india-march-2021-reflection.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: block;
+} */
 
 .video-player video{
   border-radius: 50%;

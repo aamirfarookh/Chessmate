@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forget Password Page</title>
+    <link rel="stylesheet" href="./styles/resetpass.css">
+</head>
+<body>
+    <div class="row">
+        <!-- logo -->
+
+        <div id="logo">
+            <img src="/assets/logo_1.jpeg" alt="err">   
+
+            <h2>Chessmate</h2>
+        </div>
+
+
+        <!-- forgot pass -->
+		<h1>Reset Password</h1>
+
+		<h6 class="information-text">Enter your registered email to reset your password.</h6>
+
+		<form class="form-group" id="resetpass">
+            <p><label for="username">Email</label></p>
+			<input type="email" name="user_email" id="user_email">
+            <p><label for="newpassword">New Password</label></p>
+			<input type="password" name="new_pass" id="new_pass">
+			<input type="submit"  id="submitOTP" value="Send OTP">
+        </form>
+
+	</div>
+
+	<script src="/scripts/resetpass.js"></script>
+
+</body>
+</html>

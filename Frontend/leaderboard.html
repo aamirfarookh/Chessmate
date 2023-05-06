@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chessmate | Leaderboard</title>
   </head>
-  <link rel="stylesheet" href="./styles/leaderboard.css" />
+  <link rel="stylesheet" type="text/css" href="/styles/leaderboard.css" />
+ 
   <body>
     <div class="confetti" id="confetti">
       <div class="confetti-piece"></div>
@@ -30,7 +31,7 @@
       </div>
     </section>
     <div class="container">
-      <div class="logo" id="logo-div"><a href="index.html"><img src="./assets/logo.png" alt="" id="logo" /></a></div>
+      <div class="logo" id="logo-div"><a href="index.html"><img src="/assets/logo.png" alt="" id="logo" /></a></div>
       
       <h1>
         <svg
@@ -71,11 +72,11 @@
   </body>
   <script>
     document.getElementById("logo-div").addEventListener("click", () => {
-      window.location.href = "index.html";
+      window.location.href = "/index.html";
     });
     setTimeout(() => {
       document.getElementById("confetti").style.display="none"
     }, 3000);
   </script>
-  <script src="./scripts/leaderboard.js"></script>
+  <script src="/scripts/leaderboard.js"></script>
 </html>

@@ -12,6 +12,10 @@ const { UserModel } = require("../models/user.model");
 const { auth } = require("../middlewares/auth");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const path = require("path");
+
+
+
 
 //   const { auth } = require("../middlewares/auth");
 
@@ -40,11 +44,13 @@ userRouter.get(
     const fetch_user = await UserModel.findOne({ email: req.user.email });
     if (fetch_user) {
       token_Genretor(res, fetch_user._id);
+      // res.redirect("./../../Frontend/leaderboard.html")
     } else {
       req.user.password = bcrypt.hashSync(req.user.password, 2);
       const user = new UserModel(req.user);
       await user.save();
       token_Genretor(res, req.user.name, "login with google");
+      // res.redirect("./../../Frontend/leaderboard.html")
     }
   }
 );
@@ -64,9 +70,18 @@ function token_Genretor(res, id) {
   res.cookie("JAA_access_token", accessToken, { maxAge: 60 * 60 * 24 });
   res.cookie("JAA_refresh_token", refreshToken, {
     maxAge: 60 * 60 * 24 * 4,
-  });
+  }); 
+  
 
-  res.send("Hello done Oauth");
+
+
+
+
+// navigate to the "frontend/leaderboard" directory
+const targetDirectory = path.join(__dirname,"../../Frontend/lobby.html");
+res.set('Content-Type', 'text/html');
+res.sendFile(targetDirectory)
+
 }
 
 module.exports = { userRouter };
