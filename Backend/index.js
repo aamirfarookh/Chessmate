@@ -1,3 +1,4 @@
+
 // Improting all the required dependencies
 const express = require("express");
 const http = require("http");
@@ -5,7 +6,11 @@ require("dotenv").config();
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const { dbConnection } = require("./config/db");
+
+const { lboardRouter } = require("./routes/leaderboard.route");
+
 const { userRouter } = require("./routes/user.route");
+
 
 // Server configuration
 const app = express();
@@ -32,7 +37,11 @@ app.get("/", (req, res) => {
   res.status(200).send("Home page");
 });
 
+
+app.use("/leaderboard",lboardRouter)
+
 app.use("/user", userRouter);
+
 
 // Listening to connections made to server
 server.listen(PORT, async () => {
