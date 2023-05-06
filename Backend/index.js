@@ -6,6 +6,7 @@ require("dotenv").config();
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const { dbConnection } = require("./config/db");
+const { lboardRouter } = require("./routes/leaderboard.route");
 
 const { lboardRouter } = require("./routes/leaderboard.route");
 
@@ -42,6 +43,7 @@ app.use("/leaderboard",lboardRouter)
 
 app.use("/user", userRouter);
 
+app.use("/leaderboard",lboardRouter)
 
 // Listening to connections made to server
 server.listen(PORT, async () => {
