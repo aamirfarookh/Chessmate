@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat:wght@600&family=Poppins&family=Quicksand&display=swap');
+
+*{
+    text-decoration: none;
+    /* color: #fff; */
+}
+
+input{
+    font-family: montserrat;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -25,15 +37,16 @@
   color: #fff;
   text-align: center;
   padding: 2em 2em 0.5em;
-  width: 90%;
-  margin: 2em	auto;
+  width: 30% !important;
+  margin: 3.5em	auto;
   border-radius: 5px;
-margin-left: 27%;
+/* margin-left: 27%; */
+/* border:1px solid red; */
 }
 
 
-  .row h1 {
-    font-size: 2.5em; }
+  /* .row h1 {
+    font-size: 2.5em; } */
 
   .row .form-group {
     margin: 0.5em 0; }
@@ -46,14 +59,16 @@ margin-left: 27%;
 
     .row .form-group input, .row .form-group button {
       display: block;
-      padding: 0.5em 0;
+      padding: 0.8em 0;
       width: 100%;
-      margin-top: 1em;
+      margin-top: 0.5em;
       margin-bottom: 0.5em;
-      background-color: inherit;
+      /* background-color: inherit; */
       border: none;
       border-bottom: 1px solid #555;
-      color: #eee; }
+      color: #eee; 
+       border-radius: 8px;
+    }
 
       .row .form-group input:focus, .row .form-group button:focus {
         background-color: #fff;
@@ -95,11 +110,10 @@ margin-left: 27%;
         #logo{
           display: flex;
           align-items: center;
-          justify-content: left;
-          /* border: 1px solid black; */
-          margin-top: -30px;
-       margin-left: 33%;
-      
+          margin-left: 10%;
+          font-size: 1.3rem;
+          /* padding-top: 1.2rem; */
+          padding-bottom: 1.5rem;
       }
       
       #logo>img{
@@ -107,31 +121,53 @@ margin-left: 27%;
           background-color: white;
       }
       
-      #logo h2{
-          font-size: 30px;
+      #logo h1{
+          font-size: 20px;
       }
 
       /* logo end */
 
 
       #submitOTP{
-         background-color:#704949;
-         color:white
+        font-size: medium;
+        width: 101%;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-family: montserrat;
+        background-color:#2C74B3;
+        border-width: 0px;
+        margin-bottom: 30px;
+        margin-top: 10px;
+        color: white;
         }
 
         #submitOTP:hover{
-          background-color: rgb(18, 128, 3);
-          color:rgb(255, 255, 255)
+          background-color: #144272;
+    color:rgb(255, 255, 255);
+    cursor:pointer;
         }
         
         #submit{
-          background-color:#704949;
-         color:white
+          font-size: medium;
+          width: 101%;
+          padding-top: 14px;
+          padding-bottom: 14px;
+          text-decoration: none;
+          border-radius: 5px;
+          font-family: montserrat;
+          background-color:#2C74B3;
+          border-width: 0px;
+          margin-bottom: 30px;
+          margin-top: 10px;
+          color: white;
         }
 
         #submit:hover{
-              background-color: rgb(18, 128, 3);
-              color:rgb(255, 255, 255)
+          background-color: #144272;
+          color:rgb(255, 255, 255);
+          cursor:pointer;
         }
 
 

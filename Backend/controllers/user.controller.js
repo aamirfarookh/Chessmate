@@ -19,7 +19,7 @@ const client = new Redis({
 require("dotenv").config();
 let sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(
-  "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"
+  process.env.SENDGRID_KEY
 );
 
 const registerNewUser = async (req, res) => {
@@ -163,7 +163,7 @@ const getotp = async (req, res) => {
   console.log(email);
   const msg = {
     to: email,
-    from: "jraghavendra842@gmail.com",
+    from: "aamirfarooqbhatt@gmail.com",
     subject: "OTP verification",
     text: `Hi!, welcome to our website!`,
     html: `<h1> This is your 6 digit OTP for email verification <h2> ${otp} </h2> Thank you!</h1>`,

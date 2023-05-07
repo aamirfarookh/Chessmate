@@ -2,12 +2,19 @@
 
 *{
     text-decoration: none;
-    color: #fff;
+    /* color: #fff; */
 }
 
 input{
     font-family: montserrat;
 }
+
+/*Animation styles*/
+
+
+
+
+
 
 body{
     text-decoration: none;
@@ -37,7 +44,6 @@ body{
     font-size: 1.3rem;
     /* justify-content: space-evenly; */
     /* border: 1px solid black; */
-
 }
 
 
@@ -147,7 +153,8 @@ form{
 
 #continue:hover{
     background-color: #144272;
-    color:rgb(255, 255, 255)
+    color:rgb(255, 255, 255);
+    cursor:pointer;
 }
 
 #forgot:hover{

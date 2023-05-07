@@ -258,6 +258,8 @@ display: none;
 border-radius: 10px;
 overflow: hidden;
 transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+border:1px solid #2C74B3;
+box-shadow: 0 0 1rem #edf0f2
 }
 .status .arrow_up, .status .arrow_down{
 position: absolute;

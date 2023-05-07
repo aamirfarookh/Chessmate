@@ -14,55 +14,62 @@
 
 <body>
 
+    <!-- <section>
+        <div class="pattern">
+            <div class="face face1"></div>
+            <div class="face face2"></div>
+        </div>
+    </section> -->
+
+    <div id="container">
 
 
-<div id="container">
+        <div id="left">
+
+            <div id="leftmaincont">  
+
+                <div id="logo" style="margin-top: 5px;">
+                    <i class="fa-solid fa-chess fa-beat" style="color: #ffffff; font-size: 1.5rem;"></i> <h3 style="margin-left: 10px;">CHESSMATE  LOGIN</h3>
+                </div>
 
 
-            <div id="left">
-
-                <div id="leftmaincont">  
-
-                    <div id="logo" style="margin-top: 5px;">
-                        <i class="fa-solid fa-chess fa-beat" style="color: #ffffff; font-size: 1.5rem;"></i> <h3 style="margin-left: 10px;">CHESSMATE  LOGIN</h3>
-                    </div>
+                <!-- <h2>Login</h2> -->
 
 
-                    <!-- <h2>Login</h2> -->
-
-
-                    <form id="formcontainer">
-                        <p>Email</p>
-                        <input type="email" id="email" class="rcheck" placeholder=" Enter your Email">
+                <form id="formcontainer">
+                    <p>Email</p>
+                    <input type="email" id="email" class="rcheck" placeholder=" Enter your Email">
 
 
 
-                        <p>Password</p>
-                        <input type="password" id="password" class="rcheck" placeholder=" Enter your password">
+                    <p>Password</p>
+                    <input type="password" id="password" class="rcheck" placeholder=" Enter your password">
 
 <!-- forget password -->
 
-                       <a href="./forgetpass.html"> <p id="forgot">Forgot your password?</p></a>
-                        <input type="submit" id="continue" value="Continue">
+                   <a href="./forgetpass.html"> <p id="forgot">Forgot your password?</p></a>
+                    <input type="submit" id="continue" value="Continue">
 
 
-                    </form>
+                </form>
 
 
 
 
-                    <p>New user? Create account <a href="./register.html" id="spanid">Register/Signup</a> </p>
+                <p>New user? Create account <a href="./register.html" id="spanid">Register/Signup</a> </p>
 
 
-                    <div id="or"> ----- Or Sign in with ----- </div>
+                <div id="or"> ----- Or Sign in with ----- </div>
 
-                    <a href="http://localhost:4500/user/auth/google/callback"><button class="echeck" id="gbtn"> <img src="./assets/google-icon.png" alt="err"> Continue with Google</button></a>
-                    <!-- <button class="echeck" id="gbtn"> <img src="./assets/google-icon.png" alt="err"> Continue with Google</button> -->
+                <a href="http://localhost:4500/user/auth/google/callback"><button class="echeck" id="gbtn"> <img src="./assets/google-icon.png" alt="err"> Continue with Google</button></a>
+                <!-- <button class="echeck" id="gbtn"> <img src="./assets/google-icon.png" alt="err"> Continue with Google</button> -->
 
 
-                </div>
             </div>
         </div>
+    </div>
+
+
         <!-- https://github.com/login/oauth/authorize?client_id=cd1f1e835763f964e4eb&scope=user -->
 
 
