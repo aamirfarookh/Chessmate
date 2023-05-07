@@ -2,7 +2,9 @@
   margin-top: 74px;
   height: clac(100vh - 74px);
   width: 100%;
-  position: relative;
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
 }
 
 #room__container {
@@ -77,8 +79,8 @@
 }
 
 #messages__container {
-  border: 1px solid red;
-  height: calc(100vh - 85px);
+  /* border: 1px solid red; */
+  height: calc(100vh - 95px);
   background-color: #144272;
   right: 0;
   position: absolute;
@@ -169,7 +171,7 @@
 }
 
 #stream__container {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   justify-self: centre;
   width: calc(100% - 75.7rem);
   /* position: fixed; */
@@ -357,12 +359,13 @@
   padding: 25px 50px;
   border: none;
   color:#fff;
+  z-index:999;
   
   position: fixed;
   
   bottom: 1rem;
   border-radius: 8px;
-  left:50%;
+  left:48%;
   transform: translateX(-50%);
   cursor: pointer;
 }

@@ -8,8 +8,16 @@
     <link rel="shortcut icon" href="./images/icon.jpg" type="image/x-icon">
     <link rel='stylesheet' type='text/css' media='screen' href='/styles/main.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='/styles/room.css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+	<link href='/styles/styles.css?v3' rel='stylesheet' type='text/css'>
 </head>
+<style>
+    .container{
+        display: flex;
+    }
+</style>
 <body>
+
 
     <header id="nav">
        <div class="nav--list">
@@ -69,8 +77,15 @@
                     </button>
                 </div>
 
-                <button id="join-btn">Join & Play</button>
+                <button id="join-btn">Join Video</button>
             </section>
+
+            <div id="wrapper">
+                <div id="container" class="clearfix">
+                </div>
+                <footer id="pageFooter">
+                </footer>
+            </div>
 
             <section id="messages__container">
 
@@ -90,6 +105,28 @@
 <script type="text/javascript" src="/scripts/room.js"></script>
 <script type="text/javascript" src="/scripts/room_rtm.js"></script>
 <script type="text/javascript" src="/scripts/room_rtc.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<!-- <script src="/https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script> -->
+ 		<script src="/scripts/settings.js?v2"></script>
+ 		<script src="/scripts/utils.js?v3"></script>
+ 		<script src="/scripts/Analyzer.js?v2"></script>
+ 		<script src="/scripts/GamePlay.js"></script>
+ 		<script src="/scripts/OnlinePlay.js"></script>
+ 		<script src="/scripts/ui.js?v3"></script>
+
+		<script>
+			CHESSAPP.GamePlay.init(gameSettings);
+		</script>
 </html>
 
-
+<!-- 
+background: #f0e1bb;
+    padding-left: 12px;
+    height: 40px;
+    overflow: hidden;
+    margin: 20px 0px;
+    position: absolute;
+    /* display: none; */
+    z-index: 9999;
+    top: 70px;
+    left: 30%; -->
