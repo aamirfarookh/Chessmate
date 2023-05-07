@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat:wght@600&family=Poppins&family=Quicksand&display=swap');
+
+
 body {
     background-color: #F9F9F9;
-    font-family: Arial, sans-serif;
+    font-family: montserrat, poppins;
     /* background-image: url(../assets/leaderboard_bg.jpg);
     background-position:center;
       background-repeat: no-repeat;
       background-size: cover;   */
+
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -105,22 +109,23 @@ body {
   }
 
   th, td {
-    border: 1px solid #1b1a1a;
+    /* border: 1px solid #1b1a1a; */
     padding: 2px;
     text-align: center;
   }
 
   th {
-    background-color: #161515;
+    background-color: #144272;
     color:#f2eeee;
     text-align: center;
+    padding: 15px;
   }
 
   tr:nth-child(even){
     background-color: #ddd;
   }
   tr:nth-child(odd){
-    background-color: #c8c2c2;
+    background-color: #2C74B3;
   }
 
  
@@ -129,8 +134,8 @@ body {
   .ranking {
     color: #060606;
     font-weight: bold;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
   }
 
   .player-name {
@@ -336,13 +341,17 @@ body {
 
 @media screen and (max-width:700px){
   table{
-    font-size:10px
+    font-size:9px
   }
   .win , .loss, .draw{
-    font-size: 10px;
+    font-size: 9px;
   }
   th{
-    font-size:10px
+    font-size:9px
+  }
+
+  .logo a img{
+    width: 150px;
   }
   h1{
     font-size: 18px;
@@ -355,3 +364,4 @@ body {
     width:35%;
   }
 
+}

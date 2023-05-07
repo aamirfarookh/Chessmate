@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat:wght@600&family=Poppins&family=Quicksand&display=swap');
+
 body{
     margin: 0;
     padding: 0;
+    font-family: montserrat;
      box-sizing: border-box;
      /* background-image: url(./bg_image.jpg); */
-    
 }
 section{
     position: fixed;
@@ -95,7 +97,7 @@ align-items: center;
 border-radius: 10px;
 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-.logo>img{
+.logo a img{
 width:60%;
 }
 .links{
@@ -105,16 +107,17 @@ justify-content: space-between;
 }
 .links>a{
 text-decoration: none;
-color:#5a3d29;
-font-weight: bold;
-padding: 20px;
+font-weight: 700;
+padding: 17px;
 border-radius: 10px;
-font-size: 18px;
+font-family: montserrat;
+font-size: 1.3rem;
 color:black;
 
 }
 .links>a:hover{
-background-color: grey;
+background-color: #2C74B3;
+color: #fff;
 }
 .main{
 display: flex;
@@ -134,6 +137,7 @@ padding:30px;
 width:30%;
 }
 .content p{
+  font-size: 1rem;
 line-height: 20px;
 }
 .content button{
@@ -146,13 +150,25 @@ line-height: 20px;
  
 }
 .content button:hover{
-background-color: #785d49;
+background-color: #2C74B3;
 font-size: 17.2px;
+cursor: pointer;
 }
 
 .image>img{
 width:100%;
 border-radius: 10px;
+}
+
+.image img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.image:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.1);
 }
 
 
