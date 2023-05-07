@@ -1,5 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat:wght@600&family=Poppins&family=Quicksand&display=swap');
+
+*{
+    text-decoration: none;
+    color: #fff;
+}
+
+input{
+    font-family: montserrat;
+}
+
 body{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    font-family: montserrat, poppins;
     margin: 0px;
     padding: 0px;
     /* color: #000000; */
@@ -10,16 +23,20 @@ body{
      /* background-size: cover; ////*/
 }
 #container{
-    display: flex;
-    height: 100vh;
+    /* border: 1px solid red; */
+    width: 60%;
+    margin: auto;
+    /* max-height: 100vh;
+    margin-right: -10px; */
 }
+
 #logo{
     display: flex;
     align-items: center;
-    justify-content: left;
+    margin-left: 15%;
+    font-size: 1.3rem;
+    /* justify-content: space-evenly; */
     /* border: 1px solid black; */
-    margin-top: -38px;
- margin-left: 21%;
 
 }
 
@@ -34,10 +51,11 @@ body{
 #logo span{
     font-size: small;
 }
+
 #left{
     margin: auto;
-    margin-top: 60px;
-    width: 60%;
+    margin-top: 70px;
+    width: 100%;
 }
 
 #leftmaincont>h1{
@@ -48,19 +66,12 @@ body{
 }
 
 #leftmaincont{
-
-
-
-
     color: white;
     background: rgba(255,255,255,0.1);
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
     transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-
-
     
     /* background-color: aqua; */
     /* width: 48%; */
@@ -126,8 +137,8 @@ form{
     padding-bottom: 14px;
     text-decoration: none;
     border-radius: 5px;
-    /* background-color:#0073ef; */
-    background-color:#704949;
+    font-family: montserrat;
+    background-color:#2C74B3;
     border-width: 0px;
     margin-bottom: 30px;
     margin-top: 10px;
@@ -135,7 +146,7 @@ form{
 }
 
 #continue:hover{
-    background-color: rgb(18, 128, 3);
+    background-color: #144272;
     color:rgb(255, 255, 255)
 }
 
@@ -152,14 +163,16 @@ form{
 
 #gbtn>img{
     width: 15px;
-    /* margin-top:4px; */
-    
-  
+}
+
+#gbtn{
+    background-color: #2C74B3;
+    font-family: montserrat;
 }
 
 #gbtn:hover{
     cursor: pointer;
-    background-color: rgb(18, 128, 3);
+    background-color: #144272;
 }
 
 #or{
@@ -184,4 +197,13 @@ form{
 
 #spanid{
     color: #0073ef;
+}
+
+@media screen and (max-width:700px){
+    #container{
+        max-width: 30vw;
+    }
+    body{
+        background-image: none;
+    }
 }
