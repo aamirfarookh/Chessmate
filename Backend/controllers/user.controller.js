@@ -1,8 +1,21 @@
 const { UserModel } = require("../models/user.model");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-let Redis = require("ioredis");
-const client = new Redis();
+let {Redis} = require("ioredis");
+const client = new Redis({
+  port: 12271,
+   host: 'redis-12271.c278.us-east-1-4.ec2.cloud.redislabs.com',
+   password: 'i4fkCzI6Taicc6DV0xpDmJPbBrT6AVXb'
+   });
+ 
+   client.on('connect', () => {
+     console.log('Connected to Redis Cloud');
+   });
+   
+   client.on('error', (err) => {
+     console.error('Error connecting to Redis Cloud:', err);
+     
+   });
 require("dotenv").config();
 let sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(

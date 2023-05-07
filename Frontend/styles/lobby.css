@@ -1,3 +1,12 @@
+body{
+  background-image: url(../assets/cover_img4.jpg);
+  /* background-position:center;
+	background-repeat: no-repeat; */
+	background-size: cover;
+	/* max-height: 100vh; */
+}
+
+
 #form__container {
   margin-top: 50px;
   width: 90%;
@@ -93,4 +102,11 @@
 
 .avatar__option__selected {
   border: 3px solid #0A2647;
+}
+
+
+@media screen and (max-width:600px){
+  body{
+    background-image: none;
+  }
 }
