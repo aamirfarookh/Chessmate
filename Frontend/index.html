@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CHESSMATE</title>
-   <link rel="stylesheet" href="./styles/index.css">
-  </head>
-  <body>
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/3af5a307c6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
     <section>
         <div class="pattern">
             <div class="face face1"></div>
@@ -16,29 +22,52 @@
     </section>
 
     <div class="container">
-        <div class="navbar">
-            <div class="logo">
-                <a href="index.html"><img src="./assets/logo.png" alt=""></a>
-                <!-- <img src="./assets/logo.png" alt=""> -->
+        <header>
+            <div class="navbar">
+                <div class="logo"><a href="#">CHESSMATE</a></div>
+                <ul class="links">
+                    <li><a href="index.html" style="font-size: 1.4rem; font-weight: 700;">Home</a></li>
+                    <li><a href="index.html" style="font-size: 1.4rem; font-weight: 700;">Login</a></li>
+                    <li><a href="index.html" style="font-size: 1.4rem; font-weight: 700;">Register</a></li>
+                </ul>
+                <div class="toggleBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </div>
-            <div class="links">
-                <a href="index.html">Home</a>
-                <a href="login.html">Login</a>
-                <a href="register.html">Register</a>
+
+            <div class="dropdownMenu open">
+                <li><a href="index.html" style="font-size: 1rem; font-weight: 700;">Home</a></li>
+                <li><a href="login.html" style="font-size: 1rem; font-weight: 700;">Login</a></li>
+                <li><a href="register.html" style="font-size: 1rem; font-weight: 700;">Register</a></li>
             </div>
-        </div>
+        </header>
         <div class="main">
             <div class="content">
                 <h1>TAKE YOUR CHESS GAME TO THE NEXT LEVEL</h1>
-                <p>Connect with top ranked chess players from around the world and learn the secrets of becoming a chess master</p>
+                <p>Connect with top ranked chess players from around the world and learn the secrets of becoming a chess
+                    master</p>
                 <a href="leaderboard.html"><button style="font-family: montserrat;">Leader Board</button></a>
             </div>
             <div class="image">
                 <img src="./assets/cover_img.jpeg" alt="ERROR">
             </div>
         </div>
-       
+
     </div>
-   
-  </body>
+    <script>
+        const toggle_Btn = document.querySelector(".toggleBtn")
+        const toggleBtnIcon = document.querySelector(".toggleBtn i")
+        const dropdown_Menu = document.querySelector(".dropdownMenu")
+
+        toggle_Btn.onclick = function () {
+            dropdown_Menu.classList.toggle("open")
+            const isOpen = dropdown_Menu.classList.contains("open")
+
+            toggleBtnIcon.classList = isOpen
+                ? "fa-solid fa-xmark"
+                : "fa-solid fa-bars"
+        }
+    </script>
+</body>
+
 </html>
