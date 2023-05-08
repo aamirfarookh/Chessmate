@@ -18,11 +18,25 @@ form2.addEventListener("submit", (e) => {
     .then((res) => {
       console.log(res.msg);
       if (res.msg === "Successfuly password changed") {
-        alert(res.msg);
-        window.location.href = "login.html";
+        Swal.fire({
+          position: "centre",
+          icon: "success",
+          title: "Password Changed",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        setTimeout(() => {
+          window.location.href = "login.html"
+        }, 2500)
+
       } else {
-        alert(res.msg);
-        window.location.href = "resetpass.html";
+        Swal.fire({
+          position: "centre",
+          icon: "error",
+          title: `${res.msg}`,
+          showConfirmButton: false,
+          timer: 1500,
+        });
       }
     })
     .catch((err) => {

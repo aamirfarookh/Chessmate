@@ -16,11 +16,23 @@ form2.addEventListener("submit", (e) => {
     .then((res) => res.json())
     .then((res) => {
       console.log(res.msg);
-      alert(res.msg);
+      Swal.fire({
+        position: "centre",
+        icon: "success",
+        title: "OTP sent Successfully.",
+        showConfirmButton: false,
+        timer: 1500,
+      });
     })
     .catch((err) => {
       console.log(err);
-      alert(res.msg);
+      Swal.fire({
+        position: "centre",
+        icon: "error",
+        title: `${err.message}`,
+        showConfirmButton: false,
+        timer: 1500,
+      });
     });
 });
 
@@ -45,10 +57,24 @@ form.addEventListener("submit", (e) => {
     .then((res) => {
       console.log(res.msg);
       if (res.msg === "OTP verification successful") {
-        alert(res.msg);
-        window.location.href = "resetpass.html";
+        Swal.fire({
+          position: "centre",
+          icon: "success",
+          title: "Verified Successfully.",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        setTimeout(() => {
+          window.location.href = "resetpass.html"
+        }, 2500)
       } else {
-        alert(res.msg);
+        Swal.fire({
+          position: "centre",
+          icon: "error",
+          title: "Incorrect OTP",
+          showConfirmButton: false,
+          timer: 1500,
+        });
       }
     })
     .catch((err) => console.log(err));

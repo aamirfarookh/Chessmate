@@ -18,7 +18,7 @@ passport.use(
         full_name: profile._json.name,
         email: profile._json.email,
         password: uuidv4(),
-        avtar: profile._json.picture,
+        avatar: profile._json.picture,
       };
       console.log(user);
       return cb(null, user);

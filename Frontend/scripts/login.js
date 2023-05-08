@@ -16,9 +16,24 @@ form.addEventListener("submit", (e) => {
     .then((res) => res.json())
     .then((res) => {
       if (res.msg == "Login success") {
-        window.location.href = "lobby.html"
+        Swal.fire({
+          position: "centre",
+          icon: "success",
+          title: "Login Success",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        setTimeout(() => {
+          window.location.href = "lobby.html"
+        }, 2500)
       } else {
-       alert("Something went wrong")
+        Swal.fire({
+          position: "centre",
+          icon: "error",
+          title: `${res.msg}`,
+          showConfirmButton: false,
+          timer: 1500,
+        });
       }
     })
     .catch((err) => console.log(err));

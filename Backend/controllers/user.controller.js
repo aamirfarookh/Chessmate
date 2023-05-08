@@ -1,26 +1,23 @@
 const { UserModel } = require("../models/user.model");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-let {Redis} = require("ioredis");
+let { Redis } = require("ioredis");
 const client = new Redis({
   port: 12271,
-   host: 'redis-12271.c278.us-east-1-4.ec2.cloud.redislabs.com',
-   password: 'i4fkCzI6Taicc6DV0xpDmJPbBrT6AVXb'
-   });
- 
-   client.on('connect', () => {
-     console.log('Connected to Redis Cloud');
-   });
-   
-   client.on('error', (err) => {
-     console.error('Error connecting to Redis Cloud:', err);
-     
-   });
+  host: "redis-12271.c278.us-east-1-4.ec2.cloud.redislabs.com",
+  password: "i4fkCzI6Taicc6DV0xpDmJPbBrT6AVXb",
+});
+
+client.on("connect", () => {
+  console.log("Connected to Redis Cloud");
+});
+
+client.on("error", (err) => {
+  console.error("Error connecting to Redis Cloud:", err);
+});
 require("dotenv").config();
 let sgMail = require("@sendgrid/mail");
-sgMail.setApiKey(
-  process.env.SENDGRID_KEY
-);
+sgMail.setApiKey(process.env.SENDGRID_KEY);
 
 const registerNewUser = async (req, res) => {
   try {
@@ -164,13 +161,28 @@ const getotp = async (req, res) => {
   const msg = {
     to: email,
     from: "aamirfarooqbhatt@gmail.com",
-    subject: "OTP verification",
-    text: `Hi!, welcome to our website!`,
-    html: `<h1> This is your 6 digit OTP for email verification <h2> ${otp} </h2> Thank you!</h1>`,
+    subject: "Your OTP for Password Change",
+    text: `Hi!, welcome to Chessmate!`,
+    html: `<h2>Hello User</h2>
+          <h2>Welcome to CHESSMATE</h2>
+           <h3>As requested, we are sending you a One-Time Password (OTP) to facilitate your password change process. Please find your OTP below:</h3>
+           <h2>OTP:${otp}</h2>
+           <h3>Thank you for choosing CHESSMATE for your account management needs.<br/>Best regards,<br/>
+               Team Chessmate</h3>
+           `
   };
 
   try {
     await sgMail.send(msg);
+
+    Swal.fire({
+      position: "centre",
+      icon: "success",
+      title: "OTP sent Successfully.",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+
     console.log("OTP sending successful");
     console.log("Received OTP value: ", otp);
 
@@ -238,3 +250,21 @@ module.exports = {
   verifyotp,
   resetpassword,
 };
+
+// Subject: Your OTP for Password Change
+
+// Dear [Recipient Name],
+
+// As requested, we are sending you a One-Time Password (OTP) to facilitate your password change process. Please find your OTP below:
+
+// OTP: [Insert OTP Code Here]
+
+// Please enter this OTP within the next [Insert Time Limit Here] to complete the password change process. If you did not request this change, please contact our customer support team immediately.
+
+// Thank you for choosing [Your Company Name] for your account management needs.
+
+// Best regards,
+
+// [Your Name]
+
+// [Your Company Name]

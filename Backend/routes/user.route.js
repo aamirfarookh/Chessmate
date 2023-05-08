@@ -44,9 +44,12 @@ userRouter.get(
     const fetch_user = await UserModel.findOne({ email: req.user.email });
     if (fetch_user) {
       token_Genretor(res, fetch_user._id);
+
       // res.redirect("./../../Frontend/leaderboard.html")
     } else {
+      console.log(req.user)
       req.user.password = bcrypt.hashSync(req.user.password, 2);
+      // req.user.avatar = fetch_user.avtar;
       const user = new UserModel(req.user);
       await user.save();
       token_Genretor(res, req.user.name, "login with google");

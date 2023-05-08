@@ -18,12 +18,13 @@ window.addEventListener("load",()=>{
 })
 
 
- function makeRow(i,name,wins,losses,draws,level){
+ function makeRow(i,name,wins,losses,draws,level,Avatar){
+  let avatar = Avatar || "../assets/avatar.jpeg"
    return `<tr>
          <td class="ranking">${i}</td>
          <td class="player-name">
            <img
-             src="/assets/king.png"
+             src=${avatar}
              alt="Player 2"
              class="player-photo"
            />
@@ -55,7 +56,7 @@ window.addEventListener("load",()=>{
        else if(user.nor_of_wins>50){
          level = "EXPERT/MASTER"
        }
-       return makeRow(i+1,user.full_name,user.nor_of_wins,user.nor_of_games,user.nor_of_wins,level)
+       return makeRow(i+1,user.full_name,user.nor_of_wins,user.nor_of_games,user.nor_of_wins,level,user.avatar)
       }).join(" ");
      console.log(mapped)
       tbody.innerHTML =mapped

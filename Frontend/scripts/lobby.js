@@ -7,6 +7,8 @@ if(displayName){
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
+    
+  
 
     sessionStorage.setItem('display_name', e.target.name.value)
 
@@ -14,5 +16,6 @@ form.addEventListener('submit', (e) => {
     if(!inviteCode){
         inviteCode = String(Math.floor(Math.random() * 10000))
     }
-    window.location = `/room.html?room=${inviteCode}`
+    window.location = `/room.html?room=${inviteCode}` 
+    
 })
