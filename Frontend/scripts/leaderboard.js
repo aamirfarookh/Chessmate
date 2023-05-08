@@ -18,8 +18,8 @@ window.addEventListener("load",()=>{
 })
 
 
- function makeRow(i,name,wins,losses,draws,level,Avatar){
-  let avatar = Avatar || "../assets/avatar.jpeg"
+ function makeRow(i,name,wins,losses,draws,level,avatar){
+   avatar = avatar || "../assets/avatar.jpeg"
    return `<tr>
          <td class="ranking">${i}</td>
          <td class="player-name">
