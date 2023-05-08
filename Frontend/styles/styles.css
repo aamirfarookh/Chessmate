@@ -1,8 +1,9 @@
-*{
+* {
 	margin: 0px;
 	padding: 0px;
 	font-family: 'Droid Sans', sans-serif;
 }
+
 .clearfix:after {
 	content: ".";
 	display: block;
@@ -11,17 +12,18 @@
 	line-height: 0;
 	height: 0;
 }
-body{
+
+body {
 	/* background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%); */
 	background-image: url(../assets/cover_img4.jpg);
-	background-position:center;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	max-height: 100vh;
 	/* margin: 0;
 	padding: 0;
 	box-sizing: border-box; */
-	
+
 }
 
 .clearfix {
@@ -35,24 +37,28 @@ html[xmlns] .clearfix {
 * html .clearfix {
 	height: 1%;
 }
-.clearfix{
-	width:500px;
+
+.clearfix {
+	width: 500px;
 	max-height: 700px;
 	/* border:1px solid white */
 }
- #container{
+
+#container {
 	width: 800px;
-    margin: 0px auto;
-    position: relative;
-    left: -90px;
-    top: 60px;
-    /* border: 1px solid red */
-	
+	margin: 0px auto;
+	position: relative;
+	left: -90px;
+	top: 60px;
+	/* border: 1px solid red */
+
 }
-#wrapper{
+
+#wrapper {
 	/* display: none; */
 }
-.overlay{
+
+.overlay {
 	width: 60%;
 	height: 400px;
 	display: none;
@@ -60,11 +66,11 @@ html[xmlns] .clearfix {
 	position: absolute;
 	top: -10px;
 	left: 182px;
-	color:black;
+	color: black;
 	text-align: center;
 }
 
-.overscreen{
+.overscreen {
 	width: 500px;
 	height: 300px;
 	background: #FFF;
@@ -75,57 +81,69 @@ html[xmlns] .clearfix {
 	padding: 10px;
 	box-shadow: #4a6dd9 0px 3px 8px;
 	border-radius: 10px;
-	background: rgba(255,255,255,0.1);
+	background: rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(15px);
-border-radius: 10px;
-overflow: hidden;
-transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	border-radius: 10px;
+	overflow: hidden;
+	transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.color span{
+
+.color span {
 	font-size: 10px;
 	display: block;
 }
-.chessboard{
+
+.chessboard {
 	width: 500px;
 	height: 500px;
 	border: 2px #bbc8f0 solid;
-	margin-left:11.8rem;
-	z-index:90;
+	margin-left: 11.8rem;
+	z-index: 90;
 	box-shadow: 0 0 1rem #edf0f2
-	
 }
-.chessboard div{
+
+.chessboard div {
 	width: 12.5%;
 	height: 12.5%;
 	float: left;
 
 }
-.chessboard div img{
+
+.chessboard div img {
 	width: 100%;
 	height: 100%;
 }
-.chessboard div p{
+
+.chessboard div p {
 	position: absolute;
 }
-.chessboard div.B{
+
+.chessboard div.B {
 	background-color: #2C74B3;
 }
-.chessboard div.W{
+
+.chessboard div.W {
 	background-color: #FFF;
 }
-.chessboard div.movable{
+
+.chessboard div.movable {
 	background-color: green;
-	box-shadow: inset 0px 0px 0px 2px rgb(0,100,0);
-	-moz-box-shadow: inset 0px 0px 0px 2px rgb(0,100,0);
-	-webkit-box-shadow: inset 0px 0px 0px 2px rgb(0,100,0);
+	box-shadow: inset 0px 0px 0px 2px rgb(0, 100, 0);
+	-moz-box-shadow: inset 0px 0px 0px 2px rgb(0, 100, 0);
+	-webkit-box-shadow: inset 0px 0px 0px 2px rgb(0, 100, 0);
 }
-.chessboard div.attackable{
+
+.chessboard div.attackable {
 	background-color: red;
 }
-.chessboard div.selected{
+
+.chessboard div.selected {
 	background-color: yellow;
 }
-.selection a, .color a, .initial a{
+
+.selection a,
+.color a,
+.initial a {
 	cursor: pointer;
 	padding: 10px;
 	width: 50px;
@@ -133,17 +151,21 @@ transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	/* height: 50px; */
 	display: block;
 	float: left;
-	text-align: center; 
+	text-align: center;
 }
-.color h2{
+
+.color h2 {
 	display: block;
 	margin-bottom: 10px;
 }
-.color a, .initial a{
+
+.color a,
+.initial a {
 	height: 100px;
 	width: 146px;
 }
-.initial a{
+
+.initial a {
 	width: 230px;
 	margin-top: 20px;
 	font-size: 1rem;
@@ -152,164 +174,254 @@ transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 }
 
-.selection a:hover, .color a:hover, .initial a:hover{
-background: #2C74B3;
-border-radius: 10px;
+.selection a:hover,
+.color a:hover,
+.initial a:hover {
+	background: #2C74B3;
+	border-radius: 10px;
 }
-.initial a:nth-child(2):hover{
+
+.initial a:nth-child(2):hover {
 	background: #2C74B3
 }
-.rightCol{
+
+.rightCol {
 	float: right;
 }
-.chat, .movelist{
-width: 300px;
-height: 250px;
-padding: 20px;
-min-height: 20px;
-/* border: 2px #bbc8f0 solid; */
-display: none;
-margin-bottom: 16px;
-box-shadow: #4a6dd9 0px 3px 8px;
+
+.chat,
+.movelist {
+	width: 300px;
+	height: 250px;
+	padding: 20px;
+	min-height: 20px;
+	/* border: 2px #bbc8f0 solid; */
+	display: none;
+	margin-bottom: 16px;
+	box-shadow: #4a6dd9 0px 3px 8px;
 	border-radius: 10px;
 	display: none;
 }
-.movelist{
+
+.movelist {
 	display: none;
 }
-.movelist .scroll{
+
+.movelist .scroll {
 	overflow: auto;
 	height: 220px;
 }
-.movelist table{
+
+.movelist table {
 	width: 100%;
 	border-collapse: collapse;
 }
-.movelist table tr td{
+
+.movelist table tr td {
 	width: 45%;
 	font-size: 12px;
 	margin: 0px;
 	padding: 0px;
 	background: rgb(234, 237, 247);
 }
-.movelist table tr:nth-child(2n+1) td{
+
+.movelist table tr:nth-child(2n+1) td {
 	background: #bbc8f0;
 }
-.movelist table tr td:first-child{
+
+.movelist table tr td:first-child {
 	width: 10%;
 }
-.chat.active{
+
+.chat.active {
 	display: none;
 }
 
-.chat p{
-color: #000;
-font-family: 'Droid Sans', sans-serif;
+.chat p {
+	color: #000;
+	font-family: 'Droid Sans', sans-serif;
 }
-.chat input{
-width : 94%;
-background: #f0e1bb;
-color: #6f7aa3;
-font-style: italic;
-border: 1px #a3915e solid;
-font-size: 12px;
-height: 27px;
-padding: 0px 3%;
--webkit-transition: background .2s linear;
-outline: none;
+
+.chat input {
+	width: 94%;
+	background: #f0e1bb;
+	color: #6f7aa3;
+	font-style: italic;
+	border: 1px #a3915e solid;
+	font-size: 12px;
+	height: 27px;
+	padding: 0px 3%;
+	-webkit-transition: background .2s linear;
+	outline: none;
 
 }
-.chat input:focus{
-font-style: normal;
-background: #fff4d7;
-color: #0b2a41;
+
+.chat input:focus {
+	font-style: normal;
+	background: #fff4d7;
+	color: #0b2a41;
 }
-.movelist h2, .chat h2{
-font-weight: normal;
-color: #6f7da3;
-font-size: 24px;
+
+.movelist h2,
+.chat h2 {
+	font-weight: normal;
+	color: #6f7da3;
+	font-size: 24px;
 }
-.chat .chatContainer, .movelist .movelistContainer{
-overflow: auto;
-height: 165px;
-margin: 15px 0px;
+
+.chat .chatContainer,
+.movelist .movelistContainer {
+	overflow: auto;
+	height: 165px;
+	margin: 15px 0px;
 }
-.chat .chatContainer p{
-font-size: 14px;
-display: none;
+
+.chat .chatContainer p {
+	font-size: 14px;
+	display: none;
 }
-.status{
+
+.status {
 	/* background: #2C74B3; */
-	width:500px;
-    padding-left: 12px;
-    height: 45px;
-    overflow: hidden;
-    margin: 20px 0px;
-    position: absolute;
+	width: 500px;
+	padding-left: 12px;
+	height: 45px;
+	overflow: hidden;
+	margin: 20px 0px;
+	position: absolute;
 	padding-top: 5px;
 	padding-left: 10px;
-    /* display: none; */
-    z-index: 9999;
-    top: -80px;
-    left: 23%;
-	color:#FFF;
-	background: rgba(255,255,255,0.1);
+	/* display: none; */
+	z-index: 9999;
+	top: -80px;
+	left: 23%;
+	color: #FFF;
+	background: rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(15px);
-border-radius: 10px;
-overflow: hidden;
-transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-border:1px solid #2C74B3;
-box-shadow: 0 0 1rem #edf0f2
+	border-radius: 10px;
+	overflow: hidden;
+	transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	border: 1px solid #2C74B3;
+	box-shadow: 0 0 1rem #edf0f2
 }
-.status .arrow_up, .status .arrow_down{
-position: absolute;
-z-index: 2;
-text-align: center;
-right: 0px;
-display: block;
-width: 20px;
-height: 20px;
-background-color: #0deaea;
-cursor: pointer;
--webkit-transition: background-color .2s linear;
--moz-transition: background-color .2s linear;
--o-transition: background-color .2s linear;
--ms-transition: background-color .2s linear;
-transition: background-color .2s linear;
+
+.status .arrow_up,
+.status .arrow_down {
+	position: absolute;
+	z-index: 2;
+	text-align: center;
+	right: 0px;
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-color: #0deaea;
+	cursor: pointer;
+	-webkit-transition: background-color .2s linear;
+	-moz-transition: background-color .2s linear;
+	-o-transition: background-color .2s linear;
+	-ms-transition: background-color .2s linear;
+	transition: background-color .2s linear;
 }
-.status .arrow_up:hover, .status .arrow_down:hover{
-background-color: #0c0c0c;
+
+.status .arrow_up:hover,
+.status .arrow_down:hover {
+	background-color: #0c0c0c;
 }
-.status.upDisabled .arrow_up, .status.downDisabled .arrow_down{
-background-color: #090909;
--webkit-transition: none;
--moz-transition: none;
--o-transition: none;
--ms-transition: none;
-transition: none;
+
+.status.upDisabled .arrow_up,
+.status.downDisabled .arrow_down {
+	background-color: #090909;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	-ms-transition: none;
+	transition: none;
 }
-.status .arrow_up{
-top: 0px;
-background: url("../images/arrow_up.png") no-repeat center ;
+
+.status .arrow_up {
+	top: 0px;
+	background: url("../images/arrow_up.png") no-repeat center;
 }
-.status .arrow_down{
-bottom: 0px;
-background: url("../images/arrow_down.png") no-repeat center ;
+
+.status .arrow_down {
+	bottom: 0px;
+	background: url("../images/arrow_down.png") no-repeat center;
 }
-.status p{
-color: #e9ebee;
-font-size: 13px;
-padding: 2px 0px;
-margin: 0px;
-font-family: 'Droid Sans', sans-serif;
+
+.status p {
+	color: #e9ebee;
+	font-size: 13px;
+	padding: 2px 0px;
+	margin: 0px;
+	font-family: 'Droid Sans', sans-serif;
 }
-.status p.e{
-color: #541717;
+
+.status p.e {
+	color: #541717;
 }
-.status p.s{
-color: #35db3b;
+
+.status p.s {
+	color: #35db3b;
 }
-.status time{
-color: #ebe5e5;
-margin-right: 5px;
+
+.status time {
+	color: #ebe5e5;
+	margin-right: 5px;
+}
+
+@media screen and (max-width:700px) {
+	#container {
+		left: -145px;
+		top: 150px;
+		width: 400px;
+		height: 400px;
+	}
+
+	.chessboard {
+		width: 300px;
+		height: 300px;
+	}
+
+	.overscreen {
+		width: 300px;
+		height: 200px;
+	}
+
+	body {
+		background-image: none;
+		background: linear-gradient(to right, #4a6dd9 #2C74B3);
+		/* url(https://w0.peakpx.com/wallpaper/400/122/HD-wallpaper-chess-board-greetings-happy-paris-tumblr-twilight-zen.jpg); */
+	}
+
+	.status {
+		width: 300px;
+		left: 182px;
+		z-index: 0;
+		height: 30px;
+		top: -66px;
+	}
+
+	.status time{
+		color: #000;
+	}
+
+	.status p{
+		color: #35db3b;
+	}
+
+	.initial a {
+		width: 126px;
+		margin-top: 32px;
+		font-size: 1rem;
+		font-weight: bolder;
+		height: 33px;
+	}
+
+	.color a {
+		height: 50px;
+		width: 125px;
+		font-size: 1rem;
+		color: #fff;
+	}
+
 }

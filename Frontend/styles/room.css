@@ -261,6 +261,7 @@
   }
 
   #stream__container {
+    position: fixed;
     width: calc(100% - 25rem);
     left: 0;
   }
@@ -282,6 +283,8 @@
 
 @media (max-width: 768px) {
   #stream__container {
+    z-index: 0;
+    top: 37px;
     width: 100%;
   }
 

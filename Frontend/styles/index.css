@@ -88,37 +88,209 @@ overflow: hidden;
 transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     /* background: transparent; */
 }
-.navbar {
-padding:10px 20px;
-/* background-color: whitesmoke; */
-display: flex;
-justify-content: space-between;
-align-items: center;
-border-radius: 10px;
-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-.logo a img{
-width:60%;
-}
-.links{
-width:60%;
-display: flex;
-justify-content: space-between;
-}
-.links>a{
-text-decoration: none;
-font-weight: 700;
-padding: 17px;
-border-radius: 10px;
-font-family: montserrat;
-font-size: 1.3rem;
-color:black;
 
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat:wght@600&family=Poppins&family=Quicksand&display=swap');
+
+
+li{
+    list-style: none;
 }
-.links>a:hover{
-background-color: #2C74B3;
-color: #fff;
+
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
 }
+
+a:hover{
+  background: #fff;
+  padding: 5px 5px;
+  border-radius: 5px;
+    /* color: #fff; */
+}
+
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar{
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+     font-size: 1.5rem;
+     font-weight: bold;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggleBtn{
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.actionBtn{
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.actionBtn:hover{
+    scale: 0.95;
+}
+
+.dropdownMenu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0px;
+    width: 250px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 999;
+}
+
+.dropdownMenu.open{
+    height: 130px;
+}
+
+.dropdownMenu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdownMenu li:hover{
+  color: #2C74B3;
+}
+
+.dropdownMenu .actionBtn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+@media (max-width: 790px) {
+    .navbar .links,
+    .navbar .actionBtn{
+        display: none;
+    }
+
+    .navbar .toggleBtn{
+        display: block;
+    }
+
+    .dropdownMenu{
+        display: block;
+    }
+}
+
+@media (max-width: 569px) {
+
+    .dropdownMenu{
+        left: 2rem;
+        width: unset;
+    }
+}
+
+.Video{
+    position: absolute;
+    /* width: 99%; */
+    /* margin: 0;
+    padding: 0; */
+    z-index: -1;
+}
+
+.Vcontent{
+    padding: 10%;
+    text-align: center;
+    /* border: 2px solid black; */
+}
+
+.Vcontent h1{
+    font-family: montserrat;
+    color: #fff;
+    font-weight: 600;
+    font-size: 60px;
+    transition: 0.5s;
+}
+
+.Vcontent h1:hover{
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+
+.Vcontent h2{
+    font-family: montserrat;
+    color: #FFD000;
+    font-weight: 600;
+    font-size: 26px;
+    transition: 0.5s;
+}
+
+.Vcontent h2:hover{
+    -webkit-text-stroke: 2px #FFD000;
+    color: transparent;
+}
+
+.Vcontent a{
+    font-family: montserrat;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid grey;
+    padding: 14px 30px;
+    border-radius: 7px;
+    margin-top: 15px;
+    margin-left: 30px;
+}
+
+@media (min-aspect-ratio: 16/9){
+    .Video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9){
+    .Video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+
+
+
 .main{
 display: flex;
 justify-content: center;
