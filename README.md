@@ -42,11 +42,11 @@ Open the application in your web browser at http://localhost:4500. <br>
 
 <h3>Contributors:</h3>
   
-  - Amir Farooq Bhat: Landing Page | Leader Board | Gameplay Integration 
-  - Avishek Singh: Implemented WebRTC and socket.io for Real-Time Video & Chat 
-  - Parimal Pramanik: Coded chess gameplay logic & backend 
-  - Raghavendra Jingade: Integrated Google OAuth & SMTP for OTP and Forgot password Integration 
-  - Mahendra Mohane: Login Page | Register Page & Backend server integration 
+  - <a href="http://github.com/aamirfarookh">Amir Bhat</a>: Landing Page | Leader Board | Gameplay Integration 
+  - <a href="http://github.com/AviSingh017">Avishek Singh</a>: Implemented WebRTC and socket.io for Real-Time Video & Chat 
+  - <a href="http://github.com/parimal-paramanik">Parimal Paramanik</a>: Coded chess gameplay logic & backend 
+  - <a href="http://github.com/JRaghu842">Raghavendra Jingade</a>: Integrated Google OAuth & SMTP for OTP and Forgot password Integration 
+  - <a href="http://github.com/Mahendra-mohane">Mahendra Mohane</a>: Login Page | Register Page & Backend server integration 
  
 <h3>Landing Page</h3>
   
@@ -66,7 +66,7 @@ Open the application in your web browser at http://localhost:4500. <br>
   
 <h3>Reset Password</h3>
   
-![index.html]("./Frontend/assets/reset.png")
+![index.html](https://github.com/aamirfarookh/ossified-nerve-3185/blob/main/Frontend/assets/reset.png)
   
 <h3>Lobby</h3>
   
