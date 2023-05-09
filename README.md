@@ -50,19 +50,19 @@ Open the application in your web browser at http://localhost:4500. <br>
  
 <h3>Landing Page</h3>
   
-![index](\Frontend\assets\index.png)
+![index](https://github.com/aamirfarookh/ossified-nerve-3185/blob/main/Frontend/assets/index.png)
   
 <h3>Login Page</h3>
   
-![index.html]("./Frontend/assets/login.png")  
+![index.html](https://github.com/aamirfarookh/ossified-nerve-3185/blob/main/Frontend/assets/login.png)  
   
 <h3>Register Page</h3>
   
-![index.html]("./Frontend/assets/register.png")
+![index.html](https://github.com/aamirfarookh/ossified-nerve-3185/blob/main/Frontend/assets/register.png)
   
 <h3>Forgot Password</h3>
   
-![index.html]("./Frontend/assets/forget.png") 
+![index.html](https://github.com/aamirfarookh/ossified-nerve-3185/blob/main/Frontend/assets/forget.png) 
   
 <h3>Reset Password</h3>
   
@@ -70,15 +70,15 @@ Open the application in your web browser at http://localhost:4500. <br>
   
 <h3>Lobby</h3>
   
-![index.html]("./Frontend/assets/lobby.png")  
+![index.html](https://github.com/aamirfarookh/ossified-nerve-3185/blob/main/Frontend/assets/lobby.png)  
   
 <h3>Room</h3>
   
-![index.html]("./Frontend/assets/room.png")  
+![index.html](https://github.com/aamirfarookh/ossified-nerve-3185/blob/main/Frontend/assets/room.png)  
   
 <h3>Leader Board</h3>
   
-![index.html]("./Frontend/assets/leader.png")  
+![index.html](https://github.com/aamirfarookh/ossified-nerve-3185/blob/main/Frontend/assets/leader.png)  
   
 <h3>Deployed Links:</h3>
   
