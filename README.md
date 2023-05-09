@@ -1,3 +1,4 @@
+
 <h1>CHESSMATE is a real-time multiplayer chess application with real-time video and chat supporting features built using WEBRTC and socket.io. It also includes login/signup using JWT and Google OAuth.<h1> 
 
 <h3>Features:</h3>
@@ -49,7 +50,7 @@ Open the application in your web browser at http://localhost:4500. <br>
  
 <h3>Landing Page</h3>
   
-![index.html]("./Frontend/assets/index.png")
+![index](\Frontend\assets\index.png)
   
 <h3>Login Page</h3>
   
