@@ -81,8 +81,8 @@ Open the application in your web browser at http://localhost:4500. <br>
   
 <h3>Deployed Links:</h3>
   
-  - FrontEnd:
-  - Backend:
+  - FrontEnd: https://chessly.netlify.app/
+  - Backend: https://chessmate-backend-production.up.railway.app/
   
 <h3>License:</h3>
 This project is licensed under the MIT License. See the LICENSE file for details.
