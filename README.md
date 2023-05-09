@@ -50,7 +50,7 @@ Open the application in your web browser at http://localhost:4500. <br>
  
 <h3>Landing Page</h3>
   
-![index.html]("./Frontend/assets/index.png")
+![index](\Frontend\assets\index.png)
   
 <h3>Login Page</h3>
   
