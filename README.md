@@ -24,7 +24,7 @@
 |----------|:-------------:|:-------------|
 | Home Page | &#10004; | Navigate the Application |
 | Login & Register | &#10004; | Add user and store in DB |
-| Lobby | &#10004; | To enter is any specific room to play |
+| Lobby | &#10004; | To enter in any specific room to play |
 | Rooms | &#10004; | Play game with real time video and chat |
 | Leader Board | &#10004; | Show different user levels |  
 
