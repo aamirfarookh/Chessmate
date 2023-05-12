@@ -7,8 +7,8 @@
    try {
      const req = await fetch(`${baseServerUrl}/leaderboard`);
      const res = await req.json();
-     console.log(res)
-      appendRow(res.splice(0,10))
+     
+      appendRow(res.splice(0,5))
    } catch (error) {
      console.log(error)
    }
@@ -58,6 +58,6 @@ window.addEventListener("load",()=>{
        }
        return makeRow(i+1,user.full_name,user.nor_of_wins,user.nor_of_games,user.nor_of_wins,level,user.avatar)
       }).join(" ");
-     console.log(mapped)
+     
       tbody.innerHTML =mapped
  }

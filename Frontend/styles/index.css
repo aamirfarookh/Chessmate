@@ -91,6 +91,9 @@ transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat:wght@600&family=Poppins&family=Quicksand&display=swap');
 
+body>h1{
+  font-size: 40px;
+}
 
 li{
     list-style: none;
@@ -498,5 +501,11 @@ a {
     }
     .container{
       height:max-content
+    }
+    #team{
+      flex-grow: 1;
+    }
+    body>h1{
+      font-size: 20px;
     }
 }
