@@ -19,6 +19,7 @@ const { userRouter } = require("./routes/user.route");
 const app = express();
 const server = http.createServer(app);
 let session = require("express-session");
+const { authRouter } = require("./routes/auth.router");
 const PORT = process.env.PORT || 4500;
 app.use(express.json());
 app.use(cookieParser());
@@ -47,6 +48,8 @@ app.get("/", (req, res) => {
 app.use("/leaderboard",lboardRouter)
 
 app.use("/user", userRouter);
+
+app.use("/auth",authRouter)
 
 
 // socket config 

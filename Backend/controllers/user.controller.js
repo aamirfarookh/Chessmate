@@ -70,21 +70,21 @@ const loginUser = async (req, res) => {
     const accessToken = jwt.sign(
       { userId: isUserPresent._id },
       process.env.JWT_ACCESS_TOKEN_SECRET_KEY,
-      { expiresIn: 60 * 60 * 24 }
+      { expiresIn: "24hr" }
     );
 
     // Generating refresh token
     const refreshToken = jwt.sign(
       { userId: isUserPresent._id },
       process.env.JWT_REFRESH_TOKEN_SECRET_KEY,
-      { expiresIn: 60 * 60 * 24 * 4 }
+      { expiresIn: "4d" }
     );
 
     // Storing tokens in cookies.
-    res.cookie("JAA_access_token", accessToken, { maxAge: 60 * 60 * 24 });
-    res.cookie("JAA_refresh_token", refreshToken, { maxAge: 60 * 60 * 24 * 4 });
+    res.cookie("JAA_access_token", accessToken);
+    res.cookie("JAA_refresh_token", refreshToken);
 
-    res.status(200).send({ msg: "Login success", accessToken, refreshToken });
+    res.status(200).send({ msg: "Login success" });
   } catch (error) {
     res.status(500).send({ msg: error.message });
   }
@@ -112,15 +112,15 @@ const logoutUser = async (req, res) => {
 
 const NewAccessToken = async (req, res) => {
   try {
-    const { JAA_refresh_token } = req?.cookies;
-
+    const JAA_refresh_token = req.headers.authorization;
     // Checking if refreshtoken is expired or not.
     jwt.verify(
       JAA_refresh_token,
       process.env.JWT_REFRESH_TOKEN_SECRET_KEY,
       async (err, payload) => {
         if (err) {
-          return res.status(401).send({ msg: err.message });
+          console.log(err)
+          return res.status(401).send({ msg: err.message});
         } else {
           const isTokenBlacklisted = await client.get(JAA_refresh_token);
           if (isTokenBlacklisted) {
@@ -135,9 +135,7 @@ const NewAccessToken = async (req, res) => {
             );
 
             // Seting token in cookie again
-            res.cookie("JAA_access_token", newAccessToken, {
-              maxAge: 60 * 60 * 24,
-            });
+            res.cookie("JAA_access_token", newAccessToken);
 
             res.status(200).send({ msg: "Token generated", newAccessToken });
           }
@@ -145,7 +143,7 @@ const NewAccessToken = async (req, res) => {
       }
     );
   } catch (error) {
-    res.status(500).send({ msg: error.message });
+    res.status(500).send({ msg: error.message, err:"Heree" });
   }
 };
 
