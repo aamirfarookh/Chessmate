@@ -447,7 +447,19 @@ that.updateOptions = function(){
 	}
 	if(check || checkmate || stalemate){
 		that.statusUpdate({msg : msg, type : type});
-		swal({
+		// swal({
+			
+		// 	imageUrl:"../assets/winner.png",
+		// 	title: "WINNER",
+		// 	text:msg,
+		// 	// showConfirmButton: false,
+			
+			
+		//   });
+		// setTimeout(() => {
+		// 	window.location.href="leaderboard.html"
+		// }, 2500);
+		 swal({
 			title: "WINNER",
 			text: `${msg}`,
 			imageUrl: "../assets/winner.png"

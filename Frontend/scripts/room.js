@@ -2,7 +2,7 @@ const baseServerUrl = `http://localhost:4500`
 
 console.log(document.cookie)
 
-const token = document.cookie
+const access_token = document.cookie
 .split('; ')
 .find(row => row.startsWith('JAA_access_token=')).split('=')[1];
 
@@ -13,18 +13,38 @@ async function isLoginValid(){
     const req = await fetch(`${baseServerUrl}/auth`,{
       headers:{
           "content-type":"application/json",
-           Authorization:token
+           Authorization:access_token
       }  
   });
   const res = await req.json();
   if(res.status === 200){
-    let messagesContainer = document.getElementById('messages');
+
+  }
+  else {
+    Swal.fire({
+      position: "center",
+      icon: "error",
+      title: "Please login first",
+      showConfirmButton: false,
+      timer: 2400
+    });
+    setTimeout(() => {
+      window.location.href ="login.html"
+    }, 3000);
+  }
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+
+let messagesContainer = document.getElementById('messages');
 messagesContainer.scrollTop = messagesContainer.scrollHeight;
 
 const memberContainer = document.getElementById('members__container');
 const memberButton = document.getElementById('members__button');
 
-const chatContainer = document.getElementById('messages__container');
+const chat_container = document.getElementById('messages__container');
 const chatButton = document.getElementById('chat__button');
 
 let activeMemberContainer = false;
@@ -39,16 +59,16 @@ memberButton.addEventListener('click', () => {
   activeMemberContainer = !activeMemberContainer;
 });
 
-let activeChatContainer = false;
+let activechat_container = false;
 
 chatButton.addEventListener('click', () => {
-  if (activeChatContainer) {
-    chatContainer.style.display = 'none';
+  if (activechat_container) {
+    chat_container.style.display = 'none';
   } else {
-    chatContainer.style.display = 'block';
+    chat_container.style.display = 'block';
   }
 
-  activeChatContainer = !activeChatContainer;
+  activechat_container = !activechat_container;
 });
 
 let displayFrame = document.getElementById('stream__box')
@@ -94,26 +114,6 @@ let hideDisplayFrame = () => {
 }
 
 displayFrame.addEventListener('click', hideDisplayFrame)
-  }
-  else {
-    Swal.fire({
-      position: "center",
-      icon: "error",
-      title: "Please login first",
-      showConfirmButton: false,
-      timer: 2400
-    });
-    setTimeout(() => {
-      window.location.href ="login.html"
-    }, 3000);
-  }
-  } catch (error) {
-    console.log(error)
-  }
-}
-
-
-isLoginValid()
 
 
 

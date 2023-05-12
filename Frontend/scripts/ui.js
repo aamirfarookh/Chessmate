@@ -242,9 +242,9 @@ CHESSAPP.ui = (function(){
 		if(online){
 			activateChat();
 		}
-		else{
-			deactivateChat();
-		}
+		// else{
+		// 	deactivateChat();
+		// }
 		initSub.apply(window, [{color: preferredColor, online: online}]);
 	};
 
@@ -331,7 +331,7 @@ CHESSAPP.ui = (function(){
 			createStatus();
 			createOverlay();
 			createRightCol();
-			// createChat();
+			createChat();
 			createMovelist();
 			elementsCreated = true;
 		}

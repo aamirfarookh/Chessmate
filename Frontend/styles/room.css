@@ -222,10 +222,10 @@
   overflow: hidden;
   height: 250px;
   width: 250px;
-  background-image: url(https://st2.depositphotos.com/33674250/45877/i/600/depositphotos_458772470-stock-photo-coimbatore-india-march-2021-reflection.jpg);
+  /* background-image: url(https://st2.depositphotos.com/33674250/45877/i/600/depositphotos_458772470-stock-photo-coimbatore-india-march-2021-reflection.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: block;
+  background-size: block; */
 }
 
 .video-player {
