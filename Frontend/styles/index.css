@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat:wght@600&family=Poppins&family=Quicksand&display=swap');
-
 body{
     margin: 0;
     padding: 0;
@@ -7,7 +6,7 @@ body{
      box-sizing: border-box;
      /* background-image: url(./bg_image.jpg); */
 }
-section{
+.animation{
     position: fixed;
     top: 0;
     left:0;
@@ -76,10 +75,10 @@ section{
     margin: auto;
     /* margin-top: 50px; */
     width:100vw;
-    height:100vh;
+    height:200vh;
     background-color: white;
     border-radius: 10px;
-    z-index: 99;
+    z-index: 9;
     position: sticky;
     background: rgba(255,255,255,0.1);
 backdrop-filter: blur(15px);
@@ -194,6 +193,11 @@ header{
     align-items: center;
     justify-content: center;
 }
+
+
+
+
+
 
 
 

@@ -62,18 +62,16 @@ function token_Genretor(res, id) {
   let accessToken = jwt.sign(
     { userId: id },
     process.env.JWT_ACCESS_TOKEN_SECRET_KEY,
-    { expiresIn: 60 * 60 * 24 }
+    { expiresIn: "24hr" }
   );
   let refreshToken = jwt.sign(
     { userId: id },
     process.env.JWT_REFRESH_TOKEN_SECRET_KEY,
-    { expiresIn: 60 * 60 * 24 * 4 }
+    { expiresIn: "4d" }
   );
 
-  res.cookie("JAA_access_token", accessToken, { maxAge: 60 * 60 * 24 });
-  res.cookie("JAA_refresh_token", refreshToken, {
-    maxAge: 60 * 60 * 24 * 4,
-  }); 
+  res.cookie("JAA_access_token", accessToken);
+  res.cookie("JAA_refresh_token", refreshToken); 
   
 
 

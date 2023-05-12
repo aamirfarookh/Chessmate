@@ -16,17 +16,26 @@ form.addEventListener("submit", (e) => {
     .then((res) => res.json())
     .then((res) => {
       if (res.msg == "Login success") {
+        localStorage.setItem("chessmate-email",payload.email);
+        console.log(document.cookie)
+        const token = document.cookie
+      .split('; ')
+      .find(row => row.startsWith('JAA_access_token='))
+      .split('=')[1];
+      console.log(token);
         Swal.fire({
           position: "centre",
           icon: "success",
           title: "Login Success",
           showConfirmButton: false,
-          timer: 1500,
+          timer: 2400,
+          position:"center"
         });
         setTimeout(() => {
           window.location.href = "lobby.html"
         }, 2500)
-      } else {
+      }
+       else {
         Swal.fire({
           position: "centre",
           icon: "error",
