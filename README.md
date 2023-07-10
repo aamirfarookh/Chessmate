@@ -1,5 +1,8 @@
 
-<h3>CHESSMATE is a real-time multiplayer chess application with real-time video and chat supporting features built using WEBRTC and socket.io. It also includes login/signup using JWT and Google OAuth.<h3> 
+![index.html](https://github.com/aamirfarookh/Chessmate/blob/main/Frontend/assets/logo.png)  
+
+<h2>CHESSMATE</h2> 
+<h3>A real-time multiplayer chess application with real-time video and chat supporting features built using webRTC and socket.io. It also includes login/signup using JWT and Google OAuth.<h3> 
 
 <h3>Features:</h3>
 
