@@ -24,7 +24,7 @@
   <h3>Deployed Links:</h3>
   
   - FrontEnd: https://chessly.netlify.app/
-  - Backend: https://chessmate-backend-production.up.railway.app/
+  - Backend: https://chessmate.onrender.com
   
  <h3>Application Flow</h3>
 
